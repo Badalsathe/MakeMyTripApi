@@ -37,11 +37,11 @@ public class MakeMyTripController {
 	    model.addAttribute("ticket", ticketInfo);
 	    return "search";
 	}
-
+  
 	@PostMapping("/bookTicket")
 	public String bookTicket(Passenger request, Model model) {
 
-		Ticket ticketInfo = makeMyTripService.processTicketBooking(request);
+		Ticket ticketInfo =   makeMyTripService.processTicketBooking(request);
 
 		model.addAttribute("ticket", ticketInfo);
 
